@@ -1,0 +1,27 @@
+find_max_min <- function(vec) {
+  if (!is.vector(vec)) {
+    stop("Invalid input: Please provide a vector.")
+  }
+  if (length(vec) == 0) {
+    stop("Invalid input: The vector cannot be empty.")
+  }
+  max_value <- max(vec)
+  min_value <- min(vec)
+  result <- list(maximum = max_value, minimum = min_value)
+  return(result)
+}
+my_vector <- c(12, 45, 6, 78, 23, 9, 100, 1)
+result <- find_max_min(my_vector)
+cat("Original Vector:", my_vector, "\n")
+cat("Maximum value:", result$maximum, "\n")
+cat("Minimum value:", result$minimum, "\n")
+another_vector <- c(-5, -10, 0, 5, 10)
+result2 <- find_max_min(another_vector)
+cat("Original Vector:", another_vector, "\n")
+cat("Maximum value:", result2$maximum, "\n")
+cat("Minimum value:", result2$minimum, "\n")
+vector_with_na <- c(1, 5, NA, 10, -2)
+result3 <- find_max_min(vector_with_na)
+cat("Original Vector:", vector_with_na, "\n")
+cat("Maximum value:", result3$maximum, "\n")
+cat("Minimum value:", result3$minimum, "\n")
