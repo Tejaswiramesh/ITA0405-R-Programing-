@@ -1,0 +1,11 @@
+sequence_20_to_50 <- seq(20, 50)
+print("Sequence from 20 to 50:")
+print(sequence_20_to_50)
+numbers_20_to_60 <- 20:60 
+mean_20_to_60 <- mean(numbers_20_to_60)
+print("Mean of numbers from 20 to 60:")
+print(mean_20_to_60)
+numbers_51_to_91 <- 51:91  
+sum_51_to_91 <- sum(numbers_51_to_91)
+print("Sum of numbers from 51 to 91:")
+print(sum_51_to_91)
