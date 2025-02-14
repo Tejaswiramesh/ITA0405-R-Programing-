@@ -1,0 +1,25 @@
+sieve_eratosthenes <- function(n) {
+  if (n < 2) {
+    return(integer(0))
+  }
+  
+  is_prime <- rep(TRUE, n + 1)
+  is_prime[1] <- FALSE
+  
+  p <- 2
+  while ((p * p) <= n) {
+    if (is_prime[p]) {
+      for (i in seq(p * p, n, by = p)) {
+        is_prime[i] <- FALSE
+      }
+    }
+    p <- p + 1
+  }
+  
+  primes <- which(is_prime)
+  return(primes)
+}
+
+limit <- 50
+prime_numbers <- sieve_eratosthenes(limit)
+cat("Prime numbers up to", limit, "are:", prime_numbers, "\n")
