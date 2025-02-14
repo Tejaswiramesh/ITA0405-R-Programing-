@@ -1,0 +1,25 @@
+find_factors <- function(num) {
+  if (!is.numeric(num) || num <= 0) {
+    stop("Invalid input: Please provide a positive number.")
+  }
+  factors <- numeric()
+  for (i in 1:sqrt(num)) {
+    if (num %% i == 0) {
+      factors <- c(factors, i)
+      if (i != num / i) {
+        factors <- c(factors, num / i)
+      }
+    }
+  }
+  factors <- sort(unique(factors))
+  return(factors)
+}
+number <- 28
+factors_of_number <- find_factors(number)
+cat("Factors of", number, "are:", factors_of_number, "\n")
+number <- 121
+factors_of_number <- find_factors(number)
+cat("Factors of", number, "are:", factors_of_number, "\n")
+number <- 36
+factors_of_number <- find_factors(number)
+cat("Factors of", number, "are:", factors_of_number, "\n")
