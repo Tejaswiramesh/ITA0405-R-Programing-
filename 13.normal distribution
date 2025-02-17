@@ -1,0 +1,7 @@
+n <- 1000  
+mean_val <- 0
+sd_val <- 1
+random_numbers <- rnorm(n, mean = mean_val, sd = sd_val)
+occurrences <- table(random_numbers)
+print("Occurrences of each value:")
+print(occurrences)
