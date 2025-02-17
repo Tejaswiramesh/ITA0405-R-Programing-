@@ -1,0 +1,6 @@
+a <- c(1, 4, 7)  
+b <- c(2, 5, 8)  
+c <- c(3, 6, 9)  
+matrix_result <- cbind(a, b, c)
+print("The resulting 3x3 matrix is:")
+print(matrix_result)
